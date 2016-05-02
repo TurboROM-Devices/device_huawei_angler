@@ -218,7 +218,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
+    ro.sf.lcd_density=500
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
@@ -231,7 +231,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.data_con_rprt=true
 
 # configure the HWUI memory limits
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Enable low power video mode for 4K encode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -240,8 +240,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # for perfd
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.min_freq_0=384000
-    ro.min_freq_4=384000
+    ro.min_freq_0=302400
+    ro.min_freq_4=302400
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
