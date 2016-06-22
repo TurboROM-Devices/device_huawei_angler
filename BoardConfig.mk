@@ -42,14 +42,17 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := saber_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.x-kernel/bin
 
 # Optimizations
-STRICT_ALIASING := false
+STRICT_ALIASING := true
 CLANG_O3 := true
 ENABLE_GCCONLY := true
-GRAPHITE_OPTS := false
+GRAPHITE_OPTS := true
 USE_PIPE := true
+ENABLE_SANITIZE := true
+CORTEX_TUNINGS := true
+POLLY_OPTIMIZATION := true
 
 BOARD_USES_ALSA_AUDIO := true
 BOARD_HAVE_BLUETOOTH := true
