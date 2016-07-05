@@ -55,7 +55,7 @@ TARGET_GCC_VERSION_ARM64 := 6.1-kernel
 TARGET_GCC_VERSION_EXP := 4.9
 
 # Optimizations
-STRICT_ALIASING := true
+STRICT_ALIASING := false
 CLANG_O3 := true
 ENABLE_GCCONLY := true
 GRAPHITE_OPTS := true
