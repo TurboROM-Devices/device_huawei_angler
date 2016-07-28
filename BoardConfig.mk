@@ -41,12 +41,13 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 
 # Kernel
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.x-kernel/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-TARGET_KERNEL_CONFIG := saber_defconfig
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_CONFIG := saber_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := saber_defconfig
 
 # Kernel TC
-TARGET_GCC_VERSION_ARM64 := 6.1-kernel
+TARGET_GCC_VERSION_ARM64 := 6.x-kernel
 
 # Rom TC
 #TARGET_GCC_VERSION_EXP := 4.9
