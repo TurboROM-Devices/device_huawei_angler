@@ -29,18 +29,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
-# Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-5.x-kernel/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
-
-# Optimizations
-STRICT_ALIASING := false
-CLANG_O3 := true
-ENABLE_GCCONLY := true
-GRAPHITE_OPTS := false
-USE_PIPE := true
-
-
 ENABLE_CPUSETS := true
 
 BOARD_KERNEL_BASE        := 0x00000000
@@ -50,6 +38,32 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=angler androidboot.selinux=permissive androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0,1,2,3,4,5,6,7
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+
+# Kernel
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.x-kernel/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-TARGET_KERNEL_CONFIG := saber_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_CONFIG := saber_defconfig
+
+# Kernel TC
+TARGET_GCC_VERSION_ARM64 := 6.1-kernel
+
+# Rom TC
+#TARGET_GCC_VERSION_EXP := 4.9
+
+# Optimizations
+STRICT_ALIASING := false
+CLANG_O3 := true
+ENABLE_GCCONLY := true
+GRAPHITE_OPTS := false
+USE_PIPE := true
+ENABLE_SANITIZE := true
+CORTEX_TUNINGS := true
+POLLY_OPTIMIZATION := true
+ENABLE_PTHREAD := true
+ENABLE_IPA_ANALYSER := true
+ENABLE_GOMP := true
+ENABLE_EXTRAGCC := true
 
 BOARD_USES_ALSA_AUDIO := true
 BOARD_HAVE_BLUETOOTH := true
