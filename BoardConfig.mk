@@ -30,7 +30,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 # Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-6.0-kernel/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-5.x-kernel/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 
 # Optimizations
@@ -139,7 +139,7 @@ EXTENDED_FONT_FOOTPRINT := true
 -include vendor/huawei/angler/BoardConfigVendor.mk
 
 # Inline kernel building
-TARGET_GCC_VERSION_ARM64 := 6.0-kernel
+TARGET_GCC_VERSION_ARM64 := 5.x-kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
-TARGET_KERNEL_CONFIG := saber_defconfig
+TARGET_KERNEL_CONFIG := candysix_angler_defconfig
