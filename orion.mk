@@ -43,4 +43,4 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
     PRIVATE_BUILD_DESC="angler-user 6.0.1 MTC20F 3031278 release-keys" \
-    BUILD_FINGERPRINT=google/angler/angler:6.0.1/MTC20F/3031278:user release-keys
+    BUILD_FINGERPRINT=google/angler/angler:6.0.1/MTC20F/3031278:user/release-keys
