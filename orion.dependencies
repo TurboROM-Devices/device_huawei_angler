@@ -7,8 +7,8 @@
   },
   {
    "remote": "github",
-    "repository": "PureNexusProject/proprietary_vendor_huawei",
+    "repository": "TheLoonyBin/proprietary_vendor_huawei",
     "target_path": "vendor/huawei",
-    "branch": "mm2"
+    "branch": "mm6.0"
   }
 ]
